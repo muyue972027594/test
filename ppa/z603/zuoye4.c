@@ -1,0 +1,53 @@
+/**判断包含数***/
+#include<stdio.h>
+int main()
+{
+	int i,j,m,n,m1,n1,a=1;
+	printf("请输入两个整数\n");
+	scanf("%d%d",&m,&n);
+	m1=m;n1=n;
+	if(m>n)
+	{
+		while(1)
+		{
+			n1/=10;a*=10;
+			if(n1==0) break;
+		}
+		while(1)
+		{
+			if(m1%a==n)
+			{
+				printf("%d包含于%d中\n",n,m);
+				break;
+			}
+			m1/=10;
+			if(m1==0) 
+			{
+                printf("%d不包含于%d中\n",n,m);
+                break;
+			}
+		}
+	}
+	else
+    {
+        while(1)
+        {
+            m1/=10;a*=10;
+            if(m1==0) break;
+        }
+        while(1)
+        {
+            if(n1%a==m)
+            {
+                printf("%d包含于%d中\n",m,n);
+                break;
+            }
+            n1/=10;
+			if(n1==0)
+            {
+                printf("%d不包含于%d中\n",m,n);
+                break;
+            }
+        }
+    }
+}

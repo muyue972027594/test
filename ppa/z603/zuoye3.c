@@ -1,0 +1,32 @@
+/***找质因数***/
+#include<stdio.h>
+int main()
+{
+	int i,j,n,m;
+	printf("请输入一个正整数\n");
+	scanf("%d",&n);
+	for(i=2;i<n;i++)
+	{
+		if(n%i==0)
+		{
+			printf("%d=",n);
+			m=n;
+			for(j=2;j<=m;j++)
+			{
+				if(m%j==0)
+				{
+					m/=j;
+					printf("%d",j);
+					j=1;
+					if(m!=1)
+						printf("×");
+					else
+						printf("\n");
+				}
+			}
+			break;
+		}
+	}	
+	if(i==n)
+		printf("此数为质数，没有质因数\n");
+}
