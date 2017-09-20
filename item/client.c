@@ -108,21 +108,21 @@ void *cli_sel(void *arg)
     	}
 			
 		if(strcmp(mydata1.sel_time,"#$") == 0) break;
-		printf("%s ",mydata1.sel_time);
-		printf("%5d ",mydata1.sel_data.Airtem);
-		printf("%5d ",mydata1.sel_data.Airhum);
-		printf("%5d ",mydata1.sel_data.Soiltem);
-		printf("%5d ",mydata1.sel_data.Soilhum);
-		printf("%5d ",mydata1.sel_data.pot);
-		printf("%5d ",mydata1.sel_data.lum);
-		printf("%5d ",mydata1.sel_data.kl_bug);
-		printf("%5d ",mydata1.sel_data.sp_manu);
-		printf("%5d ",mydata1.sel_data.water_bk);
-		printf("%5d ",mydata1.sel_data.heat_bk);
-		printf("%5d ",mydata1.sel_data.wind_bk);
-		printf("%5d ",mydata1.sel_data.light_bk);
-		printf("%5d ",mydata1.sel_data.make_bk);
-		printf("\n");
+		printf("%s \n",mydata1.sel_time);
+		printf("空气温度 %3d ",mydata1.sel_data.Airtem);
+		printf("空气湿度 %3d \n",mydata1.sel_data.Airhum);
+		printf("土壤温度 %3d ",mydata1.sel_data.Soiltem);
+		printf("土壤湿度 %3d \n",mydata1.sel_data.Soilhum);
+		printf("CO2浓度 %5d ",mydata1.sel_data.pot);
+		printf("光照强度 %5d \n",mydata1.sel_data.lum);
+		printf("杀虫状态 %2d ",mydata1.sel_data.kl_bug);
+		printf("施肥状态 %2d ",mydata1.sel_data.sp_manu);
+		printf("浇水状态 %2d \n",mydata1.sel_data.water_bk);
+		printf("加热状态 %2d ",mydata1.sel_data.heat_bk);
+		printf("通风状态 %2d ",mydata1.sel_data.wind_bk);
+		printf("补光状态 %2d ",mydata1.sel_data.light_bk);
+		printf("生成CO2状态%2d ",mydata1.sel_data.make_bk);
+		printf("\n\n\n");
 
 	}
 
